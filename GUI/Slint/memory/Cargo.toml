@@ -1,0 +1,25 @@
+[package]
+name = "memory"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+#slint = "1.3.2"
+slint = { git = "https://github.com/slint-ui/slint.git", default-features = true,  features = [
+     "renderer-winit-software", 
+    # "std",
+     "backend-winit",
+     "compat-1-2"
+]}
+
+[build-dependencies]
+slint-build = { git = "https://github.com/slint-ui/slint.git"}
+
+[env]
+SLINT_BACKEND = "winit-software"
+SLINT_DEBUG_PERFORMANCE= "refresh_full_speed,overlay"
+
+[package.metadata.cross.target.x86_64-apple-darwin]
+image = "ghcr.io/cross-rs/x86_64-apple-darwin-cross:local"
