@@ -2,6 +2,9 @@
 ./Core/cross/*
 ./GUI/Slint/slint/*
 ./GUI/Slint/Tomotroid/*
+GUI/Slint/Tomotroid
+Core/cross
+GUI/Slint/slint
 
 
 
@@ -1050,6 +1053,4 @@ dkms.conf
 *.uf2
 # Raspberry Pi Pico disassembler file
 *.dis
-GUI/Slint/Tomotroid
-Core/cross
-GUI/Slint/Tomotroid
+
